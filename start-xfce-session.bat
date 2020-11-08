@@ -1,0 +1,1 @@
+start /B "xlaunch.exe %CD%\config.xlaunch" kali.exe run "if [ -z \"$(pidof xfce4-session)\" ]; then export DISPLAY=127.0.0.1:0.0; export LIBGL_ALWAYS_INDIRECT; xfce4-session; pkill '(gpg|ssh)-agent'; taskkill.exe /IM xlaunch.exe; fi;"
